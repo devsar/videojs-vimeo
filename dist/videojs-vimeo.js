@@ -304,7 +304,9 @@ function injectCss() {
   head.appendChild(style);
 }
 
-Component.registerComponent('Vimeo', Vimeo);
+// Remove component register because is not compatible with VideoJS 6.2.5
+// Uncaught Error: Illegal component, "Vimeo"; techs must be registered using Tech.registerTech().
+// Component.registerComponent('Vimeo', Vimeo);
 Tech.registerTech('Vimeo', Vimeo);
 
 // Include the version number.
